@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { environment } from 'src/environments/environment';
 import { InsertAuthTokenInterceptor } from './services/insert-auth-token-interceptor.service';
+import { CalculationComponent } from './calculation/calculation.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { InsertAuthTokenInterceptor } from './services/insert-auth-token-interce
     AppComponent,
     HomeComponent,
     PageNotFoundComponent,
-    RatingComponent
+    RatingComponent,
+    CalculationComponent
   ],
   imports: [
     BrowserModule,

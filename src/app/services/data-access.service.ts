@@ -16,6 +16,13 @@ export class DataAccessService {
             );
     }
 
+    getRatingForList(scoreList: Array<number>) {
+        return this.httpClient.post(`${this.functionUrl}`, { scores: scoreList }, {responseType: 'text'})
+            .pipe(
+                catchError(this.handleError)
+            );
+    }
+
     private handleError(response: HttpErrorResponse) {
         const errMsg = (response.error) ? response.error : response.status ?
             `${response.status} - ${response.statusText}` : 'Server error';

@@ -1,0 +1,12 @@
+<h1>Rating</h1>
+<table class="table">
+    <tr *ngFor="let item of valueList; let i=index">
+        <td><input type="number" min="0" max="10" [(ngModel)]="item.value" /></td>
+    </tr>
+</table>
+<button type="button" class="btn btn-primary" (click)="getRating()">Calculate</button>
+<h4>Result:</h4>
+<div *ngIf="imageSrc">
+  <img [src]="imageSrc" />
+</div>
+<h4 *ngIf="errorMessage" style="color: red">{{errorMessage}}</h4>
